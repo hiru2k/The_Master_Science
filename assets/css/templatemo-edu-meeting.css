@@ -431,7 +431,7 @@ header
 }
 
 .header-area .main-nav .nav li a {
-  display: block;
+  display: none;
   font-weight: 500;
   font-size: 14px;
   text-transform: uppercase;
@@ -497,7 +497,7 @@ header
 
 .header-area .main-nav .nav li.has-sub ul.sub-menu li a {
   opacity: 1;
-  display: block;
+  display: none;
   background: #f7f7f7;
   color: #2a2a2a !important;
   padding-left: 20px;
@@ -533,7 +533,7 @@ header
 
 .header-area .main-nav .menu-trigger {
   cursor: pointer;
-  display: block;
+
   position: absolute;
   top: 33px;
   width: 40px;
@@ -769,11 +769,11 @@ header
   .header-area .nav {
     display: none; /* Hide header on mobile */
   }
-  .header-area .main-nav .nav {
+
+  .header-area .main-nav li {
     display: none; /* This hides the top-to-bottom menu */
   }
 }
-
 /* 
 ---------------------------------------------
 banner
