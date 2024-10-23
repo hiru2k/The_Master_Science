@@ -729,7 +729,7 @@ header
   left: -250px; /* Start off-screen */
   width: 250px;
   height: 100%;
-  background-color: #7a6ad8;
+  background-color: #040b14;
   box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
   transition: left 0.3s ease; /* Smooth transition when opening/closing */
   z-index: 100;
@@ -750,13 +750,13 @@ header
 }
 
 .side-menu ul li {
-  padding: 16px;
+  padding: 1px;
 }
 
 .side-menu ul li a {
   color: white;
   text-decoration: none;
-  font-size: 18px;
+  font-size: 15px;
   display: block;
 }
 
@@ -773,6 +773,62 @@ header
   .header-area .main-nav li {
     display: none; /* This hides the top-to-bottom menu */
   }
+}
+
+.side-menu .profile img {
+  margin: 15px auto;
+  display: block;
+  width: 120px;
+  border: 8px solid #2c2f3f;
+}
+
+.side-menu .profile h1 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  -moz-text-align-last: center;
+  text-align-last: center;
+  font-family: "Poppins", sans-serif;
+}
+
+.side-menu .profile h1 a,
+.side-menu .profile h1 a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.side-menu .profile .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #212431;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+.side-menu .profile .social-links a:hover {
+  background: #7a6ad8;
+  color: #fff;
+  text-decoration: none;
+}
+
+.side-menu .profile ul {
+  margin-top: 13px;
+}
+
+.side-menu .profile ul li span {
+  font-weight: 300;
+  margin-left: 13px;
+}
+.side-menu .profile ul li a {
+  font-weight: 100;
 }
 /* 
 ---------------------------------------------
