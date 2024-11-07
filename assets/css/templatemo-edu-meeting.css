@@ -1695,7 +1695,7 @@ section.our-facts {
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   padding: 140px 0px 125px 0px;
   background-color: rgba(0, 0, 0, 0.9);
   box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
@@ -2013,6 +2013,17 @@ section.classes-page .pagination ul li a:hover {
 @media (max-width: 992px) {
   .templatemo-item-col {
     width: 45%;
+  }
+
+  section.tutor-now {
+    background-image: url(../images/apply-bg-mob.png);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px;
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
   }
 }
 
