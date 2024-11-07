@@ -123,8 +123,8 @@
     },
   });
 
-  $(".owl-comments-item").owlCarousel({
-    items: 1,
+  $(".owl-comment-item").owlCarousel({
+    items: 3,
     loop: true,
     dots: true,
     nav: true,
@@ -133,12 +133,36 @@
     autoplaySpeed: 1000, // Speed of the transition (1000 ms = 1 second)
     navSpeed: 1000, // Speed of navigation transition (1000 ms = 1 second)
     margin: 30,
+    center: true, // Ensure this is set to true
     responsive: {
       0: {
         items: 1,
       },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
     },
   });
+
+  // $(".owl-comments-item").owlCarousel({
+  //   items: 1,
+  //   loop: true,
+  //   dots: true,
+  //   nav: true,
+  //   autoplay: true,
+  //   autoplayTimeout: 8000, // Time between each auto transition (3000 ms = 3 seconds)
+  //   autoplaySpeed: 1000, // Speed of the transition (1000 ms = 1 second)
+  //   navSpeed: 1000, // Speed of navigation transition (1000 ms = 1 second)
+  //   margin: 30,
+  //   responsive: {
+  //     0: {
+  //       items: 1,
+  //     },
+  //   },
+  // });
 
   $(".owl-lesson_coverage-item").owlCarousel({
     items: 4,
@@ -265,7 +289,7 @@
     );
   });
 
-  const dropdownOpener = $(".main-nav ul.nav .has-sub > a");
+  // const dropdownOpener = $(".main-nav ul.nav .has-sub > a");
 
   // REVIEWS CAROUSEL
   $(".reviews-carousel").owlCarousel({
@@ -309,46 +333,46 @@
   $(window).on("resize", ReviewsNavResize);
   $(document).on("ready", ReviewsNavResize);
 
-  // Open/Close Submenus
-  if (dropdownOpener.length) {
-    dropdownOpener.each(function () {
-      var _this = $(this);
+  // // Open/Close Submenus
+  // if (dropdownOpener.length) {
+  //   dropdownOpener.each(function () {
+  //     var _this = $(this);
 
-      _this.on("tap click", function (e) {
-        var thisItemParent = _this.parent("li"),
-          thisItemParentSiblingsWithDrop = thisItemParent.siblings(".has-sub");
+  //     _this.on("tap click", function (e) {
+  //       var thisItemParent = _this.parent("li"),
+  //         thisItemParentSiblingsWithDrop = thisItemParent.siblings(".has-sub");
 
-        if (thisItemParent.hasClass("has-sub")) {
-          var submenu = thisItemParent.find("> ul.sub-menu");
+  //       if (thisItemParent.hasClass("has-sub")) {
+  //         var submenu = thisItemParent.find("> ul.sub-menu");
 
-          if (submenu.is(":visible")) {
-            submenu.slideUp(450, "easeInOutQuad");
-            thisItemParent.removeClass("is-open-sub");
-          } else {
-            thisItemParent.addClass("is-open-sub");
+  //         if (submenu.is(":visible")) {
+  //           submenu.slideUp(450, "easeInOutQuad");
+  //           thisItemParent.removeClass("is-open-sub");
+  //         } else {
+  //           thisItemParent.addClass("is-open-sub");
 
-            if (thisItemParentSiblingsWithDrop.length === 0) {
-              thisItemParent
-                .find(".sub-menu")
-                .slideUp(400, "easeInOutQuad", function () {
-                  submenu.slideDown(250, "easeInOutQuad");
-                });
-            } else {
-              thisItemParent
-                .siblings()
-                .removeClass("is-open-sub")
-                .find(".sub-menu")
-                .slideUp(250, "easeInOutQuad", function () {
-                  submenu.slideDown(250, "easeInOutQuad");
-                });
-            }
-          }
-        }
+  //           if (thisItemParentSiblingsWithDrop.length === 0) {
+  //             thisItemParent
+  //               .find(".sub-menu")
+  //               .slideUp(400, "easeInOutQuad", function () {
+  //                 submenu.slideDown(250, "easeInOutQuad");
+  //               });
+  //           } else {
+  //             thisItemParent
+  //               .siblings()
+  //               .removeClass("is-open-sub")
+  //               .find(".sub-menu")
+  //               .slideUp(250, "easeInOutQuad", function () {
+  //                 submenu.slideDown(250, "easeInOutQuad");
+  //               });
+  //           }
+  //         }
+  //       }
 
-        e.preventDefault();
-      });
-    });
-  }
+  //       e.preventDefault();
+  //     });
+  //   });
+  // }
 
   function visible(partial) {
     var $t = partial,
