@@ -1092,6 +1092,9 @@ section.upcoming-classes .section-heading {
 section.comments .section-heading {
   text-align: center;
 }
+section.contact-us .section-heading {
+  text-align: center;
+}
 
 section.upcoming-classes .categories {
   background-color: #fff;
@@ -1688,7 +1691,7 @@ our facts
 */
 
 section.our-facts {
-  background-image: url(../images/pazan_results_bg.png);
+  background-image: url(../images/facts-bg1.jpg);
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -2170,10 +2173,6 @@ Contact Style
 .contact-us .section-heading {
   margin-right: 110px;
   margin-bottom: 0px;
-}
-
-.contact-us .section-heading p {
-  margin-top: 50px;
 }
 
 .contact-us .special-offer {
