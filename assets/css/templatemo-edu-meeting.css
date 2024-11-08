@@ -817,7 +817,7 @@ header
   margin: 15px auto;
   display: block;
   width: 120px;
-  border: 8px solid #2c2f3f;
+  border: 2px solid #2c2f3f;
 }
 
 .side-menu .profile h1 {
@@ -1474,15 +1474,6 @@ lesson_coverage
 --------------------------------------------- 
 */
 
-section.top-achivers {
-  background-image: url(../images/classes-bg.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-bottom: 130px;
-}
-
 .top-achivers .item .down-content {
   background-color: #fff;
 }
@@ -1690,29 +1681,56 @@ our facts
 ---------------------------------------------
 */
 
-section.our-facts {
-  background-image: url(../images/facts-bg1.jpg);
-  background-position: center center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 140px 0px 125px 0px;
-  background-color: rgba(0, 0, 0, 0.9);
-  box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
-}
-
-section.our-facts h2 {
-  font-size: 38px;
-  color: white;
-  line-height: 50px;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  margin-bottom: 50px;
-}
-
-.count-area-content {
+section.our-facts h4 {
+  color: black;
   text-align: center;
-  background-color: rgba(122, 106, 216, 0.95);
+
+  line-height: 40px;
+
+  padding-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
+section.our-facts h5 {
+  color: black;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -20px;
+
+  line-height: 40px;
+
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: black;
+}
+.count-area-content-1 {
+  text-align: center;
+  background-color: #7a6ad8;
+  border-radius: 20px;
+  padding: 25px 30px 35px 30px;
+  margin: 15px 0px;
+}
+.count-area-content-2 {
+  text-align: center;
+  background-color: rgba(122, 106, 216, 0.7);
+  border-radius: 20px;
+  padding: 25px 30px 35px 30px;
+  margin: 15px 0px;
+}
+.count-area-content-3 {
+  text-align: center;
+  background-color: rgba(122, 106, 216, 0.5);
+  border-radius: 20px;
+  padding: 25px 30px 35px 30px;
+  margin: 15px 0px;
+}
+.count-area-content-4 {
+  text-align: center;
+  background-color: rgba(122, 106, 216, 0.2);
   border-radius: 20px;
   padding: 25px 30px 35px 30px;
   margin: 15px 0px;
@@ -1746,7 +1764,7 @@ section.our-facts h2 {
   margin-top: 45px;
 }
 
-section.our-facts .video {
+/* section.our-facts .video {
   text-align: center;
   margin-left: 70px;
   background-image: url(../images/video-item-bg.jpg);
@@ -1759,7 +1777,7 @@ section.our-facts .video {
 section.our-facts .video img {
   padding: 170px 0px;
   max-width: 56px;
-}
+} */
 
 /*
 ---------------------------------------------
@@ -2024,6 +2042,68 @@ section.classes-page .pagination ul li a:hover {
     padding: 140px 0px;
     box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
     margin-top: 100px;
+  }
+}
+@media (min-width: 992px) {
+  section.our-facts {
+    background-image: url(../images/facts-bg1.jpg);
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 140px 0px 125px 0px;
+    background-color: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 4px 8px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  section.our-facts h4 {
+    color: white;
+    text-align: center;
+
+    padding-bottom: 20px;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  section.our-facts h5 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: -20px;
+
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+  .count-area-content-1 {
+    text-align: center;
+    background-color: #7a6ad8;
+    border-radius: 20px;
+    padding: 25px 30px 35px 30px;
+
+    margin: 15px 0px;
+  }
+  .count-area-content-2 {
+    text-align: center;
+    background-color: rgba(122, 106, 216, 0.7);
+    border-radius: 20px;
+    padding: 25px 30px 35px 30px;
+    margin: 15px 0px;
+  }
+  .count-area-content-3 {
+    text-align: center;
+    background-color: rgba(122, 106, 216, 0.5);
+    border-radius: 20px;
+    padding: 25px 30px 35px 30px;
+    margin: 15px 0px;
+  }
+  .count-area-content-4 {
+    text-align: center;
+    background-color: rgba(122, 106, 216, 0.2);
+    border-radius: 20px;
+    padding: 25px 30px 35px 30px;
+    margin: 15px 0px;
   }
 }
 
