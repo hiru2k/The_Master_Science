@@ -23,9 +23,8 @@
     });
   });
 
-  var $grid = $(".relative-container").isotope({
+  var $grid = $(".custom-relative-container").isotope({
     itemSelector: ".all",
-    layoutMode: "fitRows",
   });
 
   const Accordion = {
@@ -184,15 +183,19 @@
     },
   });
 
-  // Menu Dropdown Toggle
-  if ($(".menu-trigger").length) {
-    $(".menu-trigger").on("click", function () {
-      $(this).toggleClass("active");
-      $(".header-area .nav").slideToggle(200);
-    });
-  }
+  //change trigger menu icon to cross icon
 
-  // Menu elevator animation
+  $(document).ready(function () {
+    // Toggle the menu dropdown on menu-trigger click
+    if ($(".menu-trigger").length) {
+      $(".menu-trigger").on("click", function () {
+        $(this).toggleClass("active");
+        $(".header-area .nav").slideToggle(200);
+      });
+    }
+  });
+
+  //Menu elevator animation
   $(".scroll-to-section a[href*=\\#]:not([href=\\#])").on("click", function () {
     if (
       location.pathname.replace(/^\//, "") ==
@@ -247,6 +250,45 @@
             $(document).on("scroll", onScroll);
           }
         );
+    });
+  });
+
+  //pagination
+
+  $(document).ready(function () {
+    var itemsPerPage = 5; // Number of items to display per page
+    var totalItems = 5; // Assuming you have 50 items to paginate
+    var totalPages = Math.ceil(totalItems / itemsPerPage);
+
+    // Function to update pagination based on current page
+    function updatePagination(currentPage) {
+      var paginationHtml = "";
+
+      // Loop to generate pagination links
+      for (var i = 1; i <= totalPages; i++) {
+        paginationHtml +=
+          "<li" +
+          (i === currentPage ? ' class="active"' : "") +
+          '><a href="#">' +
+          i +
+          "</a></li>";
+      }
+
+      paginationHtml +=
+        '<li><a href="#"><i class="fa fa-angle-right"></i></a></li>';
+      $(".pagination ul").html(paginationHtml); // Update the pagination UI
+    }
+
+    // Initially load pagination for page 1
+    updatePagination(1);
+
+    // Click event for pagination links
+    $(".pagination ul").on("click", "li a", function (e) {
+      e.preventDefault();
+      var clickedPage = $(this).text();
+      if (clickedPage !== "›") {
+        updatePagination(parseInt(clickedPage)); // Update pagination when a page number is clicked
+      }
     });
   });
 
